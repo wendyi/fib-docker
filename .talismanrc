@@ -1,0 +1,13 @@
+fileignoreconfig:
+- filename: nginx/default.conf
+  checksum: 7a2cbe69f262bd8206e36dff2a64d9af4212b66bbf7f1c3908dd90736ad0836b
+- filename: server/keys.js
+  checksum: 0be3b0f56a0d1e858fff4df1e7f8e9d5078a808b3b1a8f1d8635228a842eb994
+- filename: nginx/default-dev.conf
+  checksum: a813181130d921c39522cc4dda39ea13b5f235691932e757472dc99b8c1fff34
+- filename: worker/index.js
+  checksum: 0f6acecac71c25c4f182c0041a264ff4c9bfdc81d955651327aa19b2bfb044cf
+- filename: docker-compose.yml
+  checksum: a0dab87dd0f907d9d703d2249ab28bf82e2abc89964fbf95f7cc8dbac2eb3778
+- filename: server/index.js
+  checksum: bf98a7c814d509c62e882feaee284480ade4dc43b0188fb10bc1de730248c750
