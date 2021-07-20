@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:14.14.0-alpinegit a
 WORKDIR = /usr/app
 
 COPY ./package.json ./
