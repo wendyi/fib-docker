@@ -1,0 +1,34 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "fib-client",
+      "image": "wendyi/fib-client",
+      "hostname":"client",
+      "essential": false
+    },
+    {
+      "name": "fib-server",
+      "image": "wendyi/fib-server",
+      "hostname": "api",
+      "essential":  false
+    },
+    {
+      "name": "fib-worker",
+      "image": "wendyi/fib-worker",
+      "essential":  false
+    },
+    {
+      "name": "fib-nginx",
+      "image": "wendyi/fib-nginx",
+      "essential":  true,
+      "port_mappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["fib-client", "fib-server"]
+    }
+  ]
+}

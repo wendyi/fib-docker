@@ -21,3 +21,15 @@ after_success:
   - docker push wendyi/fib-nginx
   - docker push wendyi/fib-server
   - docker push wendyi/fib-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: 'fib-react'
+  env: 'Fibreact-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-844860899486'
+  bucket_path: 'fib-react'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
