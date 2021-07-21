@@ -5,18 +5,21 @@
       "name": "fib-client",
       "image": "wendyi/fib-client",
       "hostname":"client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "fib-server",
       "image": "wendyi/fib-server",
       "hostname": "api",
-      "essential":  false
+      "essential":  false,
+      "memory":  128
     },
     {
       "name": "fib-worker",
       "image": "wendyi/fib-worker",
-      "essential":  false
+      "essential":  false,
+      "memory":  128
     },
     {
       "name": "fib-nginx",
@@ -28,7 +31,8 @@
           "containerPort": 80
         }
       ],
-      "links": ["fib-client", "fib-server"]
+      "links": ["fib-client", "fib-server"],
+      "memory":  128
     }
   ]
 }

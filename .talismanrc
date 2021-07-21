@@ -11,3 +11,6 @@ fileignoreconfig:
   checksum: a0dab87dd0f907d9d703d2249ab28bf82e2abc89964fbf95f7cc8dbac2eb3778
 - filename: server/index.js
   checksum: bf98a7c814d509c62e882feaee284480ade4dc43b0188fb10bc1de730248c750
+- filename: .travis.yml
+  checksum: ae488a03982e5841989ad2883e5c928fd700fc8f626121412a38cb444580e716
+
