@@ -10,17 +10,17 @@ script:
   - docker run -e CI=true wendyi/react-test npm test
 
 after_success:
-  - docker build -t wendyi/fib-client ./client
-  - docker build -t wendyi/fib-nginx ./nginx
-  - docker build -t wendyi/fib-server ./server
-  - docker build -t wendyi/fib-worker ./worker
+  - docker build -t wendyi/fib-client:v1 ./client
+  - docker build -t wendyi/fib-nginx:v1 ./nginx
+  - docker build -t wendyi/fib-server:v1 ./server
+  - docker build -t wendyi/fib-worker:v1 ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push wendyi/fib-client
-  - docker push wendyi/fib-nginx
-  - docker push wendyi/fib-server
-  - docker push wendyi/fib-worker
+  - docker push wendyi/fib-client:v1
+  - docker push wendyi/fib-nginx:v1
+  - docker push wendyi/fib-server:v1
+  - docker push wendyi/fib-worker:v1
 
 deploy:
   provider: elasticbeanstalk
