@@ -3,27 +3,27 @@
   "containerDefinitions": [
     {
       "name": "fib-client",
-      "image": "wendyi/fib-client",
+      "image": "wendyi/fib-client:v1",
       "hostname":"client",
       "essential": false,
       "memory": 128
     },
     {
       "name": "fib-server",
-      "image": "wendyi/fib-server",
+      "image": "wendyi/fib-server:v1",
       "hostname": "api",
       "essential":  false,
       "memory":  128
     },
     {
       "name": "fib-worker",
-      "image": "wendyi/fib-worker",
+      "image": "wendyi/fib-worker:v1",
       "essential":  false,
       "memory":  128
     },
     {
       "name": "fib-nginx",
-      "image": "wendyi/fib-nginx",
+      "image": "wendyi/fib-nginx:v1",
       "essential":  true,
       "portMappings": [
         {
