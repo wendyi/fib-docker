@@ -25,7 +25,7 @@
       "name": "fib-nginx",
       "image": "wendyi/fib-nginx",
       "essential":  true,
-      "port_mappings": [
+      "portMappings": [
         {
           "hostPort": 80,
           "containerPort": 80
