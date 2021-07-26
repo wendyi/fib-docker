@@ -17,7 +17,7 @@ after_success:
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push wendyi/fib-client:v1
+  - docker push wendyi/fib-client:v1.1
   - docker push wendyi/fib-nginx:v1
   - docker push wendyi/fib-server:v1
   - docker push wendyi/fib-worker:v1
